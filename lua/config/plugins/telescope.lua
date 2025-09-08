@@ -150,6 +150,14 @@ return {
                     path_display = { "tail" },
                     initial_mode = "normal",
                 },
+                lsp_document_symbols = {
+                    theme = "ivy",
+                    initial_mode = "normal",
+                },
+                treesitter = {
+                    theme = "ivy",
+                    initial_mode = "normal",
+                },
             },
             extensions = {
                 fzf = {},
@@ -168,8 +176,20 @@ return {
         vim.keymap.set('n', '<leader>fr', builtin.resume, { desc = '[F]uzzy [R]esume' })
         vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = '[F]uzzy [B]uffers' })
         vim.keymap.set('n', '<leader>fo', builtin.oldfiles, { desc = '[F]uzzy [O]ld Files' })
-        vim.keymap.set('n', '<leader>fs', builtin.grep_string, { desc = '[F]uzzy Grip [S]tring ' })
-        vim.keymap.set('n', '<leader>fq', builtin.quickfix, { desc = '[Q]uickfix' })
+        vim.keymap.set('n', '<leader>fq', builtin.quickfix, { desc = '[F]uzzy [Q]uickfix' })
+        vim.keymap.set('n', '<leader>ft', builtin.treesitter, { desc = '[F]uzzy [T]reesitter' })
+
+        -- Document symbols
+        vim.keymap.set('n', '<leader>fs', builtin.lsp_document_symbols, { desc = '[F]uzzy [S]ymbols All' })
+        vim.keymap.set('n', '<leader>fss', builtin.lsp_document_symbols, { desc = '[F]uzzy [S]ymbols All' })
+
+        vim.keymap.set('n', '<leader>fsf', function()
+            builtin.lsp_document_symbols({ symbols = { 'function', 'method' } })
+        end, { desc = '[F]uzzy [S]ymbols Functions' })
+
+        vim.keymap.set('n', '<leader>fsc', function()
+            builtin.lsp_document_symbols({ symbols = { 'constant' } })
+        end, { desc = '[F]uzzy [S]ymbols Functions' })
 
         -- vim.keymap.set('n', '<leader>fs', builtin.builtin, { desc = '[F]uzzy [S]earch [S]elect Telescope' })
 

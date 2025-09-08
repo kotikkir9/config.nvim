@@ -3,6 +3,10 @@ return {
         -- dir = "~/plugins/present.nvim",
     },
     {
+        "NoahTheDuke/vim-just",
+        ft = { "just" },
+    },
+    {
         'MeanderingProgrammer/render-markdown.nvim',
         -- enabled = false,
         dependencies = {
