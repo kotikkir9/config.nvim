@@ -44,8 +44,6 @@ vim.keymap.set("n", "ycc", "yygccp", { remap = true })
 vim.keymap.set("x", "/", "<Esc>/\\%V");
 
 -- Automatically add semicolon or comma at the end of the line in INSERT and NORMAL modes
-vim.keymap.set("i", ";;", "<ESC>A;")
-vim.keymap.set("i", ",,", "<ESC>A,")
 vim.keymap.set("n", ";;", "A;<ESC>")
 vim.keymap.set("n", ",,", "A,<ESC>")
 -- </Reddit>
@@ -78,8 +76,8 @@ vim.keymap.set("n", "<leader>p", function() buffer_command("bprev") end)
 vim.keymap.set("n", "<C-n>", function() buffer_command("bnext") end)
 vim.keymap.set("n", "<C-p>", function() buffer_command("bprev") end)
 
--- vim.keymap.set("n", "<leader>dd", function()
-vim.keymap.set("n", "<leader>bd", function()
+-- vim.keymap.set("n", "<leader>bd", function()
+vim.keymap.set("n", "<leader>dd", function()
     if vim.bo.buftype == "terminal" then
         vim.cmd("bd!")
     else
