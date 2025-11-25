@@ -130,7 +130,7 @@ return {
 
             require("mason-lspconfig").setup({
                 automatic_installation = {},
-                automatic_enable =  true,
+                automatic_enable = true,
                 ensure_installed = {
                     "lua_ls",
                     "bashls",
@@ -141,6 +141,7 @@ return {
                     "tailwindcss",
                     "basedpyright",
                     "ruff",
+                    "clangd",
                 },
                 handlers = {
                     function(server_name) -- default handler (optional)
@@ -164,7 +165,7 @@ return {
                 vim.cmd("MasonInstall roslyn")
             end
 
-            require("roslyn").setup({})
+            require("roslyn").setup({ filewatching = "roslyn" })
             require("fidget").setup({})
         end,
     }
