@@ -99,6 +99,7 @@ return {
     },
     {
         "mistweaverco/kulala.nvim",
+        lazy = false,
         opts = {
             default_view = "headers_body",
             icons = {
