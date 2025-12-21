@@ -1,0 +1,10 @@
+{
+    "diagnostics.globals": [
+        "body",
+        "describe",
+        "it"
+    ],
+    "diagnostics.disable": [
+        "undefined-field"
+    ]
+}
