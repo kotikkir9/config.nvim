@@ -142,6 +142,7 @@ return {
                     "basedpyright",
                     "ruff",
                     "clangd",
+                    "rust_analyzer",
                 },
                 handlers = {
                     function(server_name) -- default handler (optional)
