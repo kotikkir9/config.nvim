@@ -1,6 +1,6 @@
 return {
     "nvim-telescope/telescope.nvim",
-    tag = "0.1.8",
+    version = "*",
     dependencies = {
         "nvim-lua/plenary.nvim",
         "debugloop/telescope-undo.nvim",
@@ -74,6 +74,9 @@ return {
         telescope.setup {
             defaults = {
                 -- path_display = { "smart" },
+                preview = {
+                    -- treesitter = false,
+                },
                 mappings = {
                     i = {
                         ['<cr>'] = select_default,

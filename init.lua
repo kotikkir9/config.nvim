@@ -20,6 +20,7 @@ vim.o.confirm = true
 vim.o.wrap = false
 vim.o.cursorline = true
 vim.o.cursorlineopt = "number"
+vim.o.isfname = table.concat({ vim.o.isfname, "(", ")" }, ",")
 
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
