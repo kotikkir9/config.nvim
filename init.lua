@@ -3,6 +3,8 @@ require("config.keymap")
 require("config.autocmd")
 require("config.filetype")
 
+require('vim._core.ui2').enable()
+
 if vim.fn.has("win32") == 1 then
     vim.cmd("language en_US")
     vim.o.shell = "pwsh"
