@@ -1,4 +1,4 @@
--- NOTE: https://cmp.saghen.dev/
+-- NOTE: https://cmp.saghen.dev/lsp
 return {
     {
         "neovim/nvim-lspconfig",
