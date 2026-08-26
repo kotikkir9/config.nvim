@@ -94,6 +94,10 @@ vim.keymap.set("n", "<leader>dd", function()
     end
 end, { desc = "Unload buffer and delete it from the buffer list." })
 
+vim.keymap.set("n", "<leader>cp", function()
+    vim.fn.setreg("+", vim.fn.expand("%:."))
+end, { desc = "Copy relative file path" })
+
 -- vim.keymap.set("n", "<leader>st", function()
 --     vim.cmd.vnew()
 --     vim.cmd.term()
